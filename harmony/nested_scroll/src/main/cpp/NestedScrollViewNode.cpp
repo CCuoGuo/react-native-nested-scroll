@@ -96,7 +96,8 @@ void NestedScrollViewNode::removeChild(ArkUINode &child) {
 }
 
 void NestedScrollViewNode::setBounce(ArkUI_NodeHandle node, bool bounces) {
-    ArkUI_NumberValue nestedScrollValue[] ={{.i32 = !bounces}};
+    // bounces=true -> ARKUI_SCROLL_EDGE_EFFECT_SPRING(0), bounces=false -> ARKUI_SCROLL_EDGE_EFFECT_NONE(2)
+    ArkUI_NumberValue nestedScrollValue[] ={{.i32 = bounces ? 0 : 2}};
     ArkUI_AttributeItem nestedScrollItem = {nestedScrollValue, sizeof(nestedScrollValue) / sizeof(ArkUI_NumberValue)};
     maybeThrow(NativeNodeApi::getInstance()->setAttribute(node, NODE_SCROLL_EDGE_EFFECT, &nestedScrollItem));
 }

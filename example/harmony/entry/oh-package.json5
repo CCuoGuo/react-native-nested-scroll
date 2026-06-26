@@ -1,0 +1,11 @@
+{
+  "license": "ISC",
+  "devDependencies": {},
+  "name": "entry",
+  "description": "example description",
+  "version": "1.0.0",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "file:../../node_modules/react-native-harmony/react_native_openharmony.har",
+    "@react-native-oh-tpl/react-native-nested-scroll": "file:../../node_modules/@react-native-oh-tpl/react-native-nested-scroll/harmony/nested_scroll.har"
+  }
+}

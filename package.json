@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "tsc": "tsc",
+    "pack": "npm pack --ignore-scripts",
     "test": "jest",
     "lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx"
   },

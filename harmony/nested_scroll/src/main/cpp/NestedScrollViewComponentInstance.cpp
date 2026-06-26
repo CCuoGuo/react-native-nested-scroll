@@ -84,6 +84,7 @@ NestedScrollViewNode &NestedScrollViewComponentInstance::getLocalRootArkUINode()
 void NestedScrollViewComponentInstance::onPropsChanged(SharedConcreteProps const &props) {
     CppComponentInstance::onPropsChanged(props);
     bounces = props->bounces;
+    this->getLocalRootArkUINode().setBounce(mNestedScrollNode.getArkUINodeHandle(), bounces);
     this->getLocalRootArkUINode().setScrollBarOff(mNestedScrollNode.getArkUINodeHandle());
 
 }
